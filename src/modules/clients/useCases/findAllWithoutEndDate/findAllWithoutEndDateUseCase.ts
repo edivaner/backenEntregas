@@ -7,7 +7,8 @@ export class FindAllWithoutEndDateUSeCase {
 
         const findAll = await prisma.deliveries.findMany({
             where: {
-                end_at: null
+                end_at: null,
+                id_deliveryman: null
             }
         });
 
