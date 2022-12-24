@@ -9,6 +9,11 @@ export class FindAllWithoutEndDateUSeCase {
             where: {
                 end_at: null,
                 id_deliveryman: null
+            },
+            select: {
+                deliveryman: true,
+                id_client: true,
+                item_name: true
             }
         });
 
